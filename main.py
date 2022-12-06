@@ -118,27 +118,6 @@ def movimento_bola():
         score1 += 1
         score1_img = pygame.image.load("assets/score/" + str(score1) +".png")
 
-def restart():
-    loop = True
-    while loop:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                loop = False
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_w:
-                    player1_cima = True
-                if event.key == pygame.K_s:
-                    player1_baixo = True
-            if event.type == pygame.KEYUP:
-                if event.key == pygame.K_w:
-                    player1_cima = False
-                if event.key == pygame.K_s:
-                    player1_baixo = False
-
-        desenho()
-        pygame.display.update()
-
-
 loop = True
 while loop:
     for event in pygame.event.get():
